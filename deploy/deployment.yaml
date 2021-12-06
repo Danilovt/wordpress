@@ -5,17 +5,17 @@ metadata:
   namespace: laboratorio
   labels:
     cattle.io/creator: norman
-    workload.user.cattle.io/workloadselector: deployment-lab-wordpress
+    workload.user.cattle.io/workloadselector: deployment-laboratorio-wordpress
   name: wordpress
 spec:
   replicas: 1
   selector:
     matchLabels:
-      workload.user.cattle.io/workloadselector: deployment-lab-wordpress
+      workload.user.cattle.io/workloadselector: deployment-laboratorio-wordpress
   template:
     metadata:
       labels:
-        workload.user.cattle.io/workloadselector: deployment-lab-wordpress
+        workload.user.cattle.io/workloadselector: deployment-laboratorio-wordpress
     spec:
       imagePullSecrets:
       - name: pipeline-docker-registry
